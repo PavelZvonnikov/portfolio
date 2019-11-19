@@ -1,30 +1,25 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import { trafficLightRoutes } from './pages/traffic-light/router';
+
 import Home from './components/Home.vue'
-import Traffic from './components/traffic-light/App/temp.vue'
+
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   mode: 'history',
   routes: [
-    { 
-      name: "home",
+    {
+      name: 'home',
       path: '/home',
       component: Home,
-      props: true 
+      props: true,
     },
+    trafficLightRoutes,
     {
-      name: "traffic-light",
-      path: '/traffic-light',
-      component: Traffic,
-      props: true 
-
-    },
-    
-    {
-      path: '/*',
+      path: '**',
       redirect: '/home'
     }
   ]

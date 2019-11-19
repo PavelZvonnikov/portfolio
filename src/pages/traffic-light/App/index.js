@@ -32,13 +32,12 @@ export default {
           id: 2
         },
       ],
-      
     };
 
     return state;
   },
   mounted: function() {
-    const routerValue = Number((this.$route.path).slice(1));
+    const routerValue = Number((this.$route.path).slice(-1));
     this.activeColor = routerValue - 1;
     this.timeToChange = this.colorsList[this.activeColor].seconds;
 

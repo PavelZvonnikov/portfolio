@@ -7,8 +7,16 @@
       <p class="info__name">Pavel Zvonnikov</p>
       <p class="info__position">Junior Frontend developer</p>
       <div class="info__contacts">
-        <div class="info__communication" v-for="(data, index) in allContacts" :key="index">
-            <img class="info__communication-icon" :src="data.img" alt="#">
+        <div
+          v-for="(data, index) in allContacts"
+          :key="index"
+          class="info__communication"
+        >
+          <img
+            :src="data.img"
+            class="info__communication-icon"
+            alt="#"
+          >
           <span class="info__communication-name">{{data.text}}</span>
         </div>
       </div>

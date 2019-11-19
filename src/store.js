@@ -40,7 +40,7 @@ export default new Vuex.Store({
         duties: 'Ремонт и обслуживание автомобилей',
         id: 2
       },
-       {
+      {
         length: 'Июнь 2019 — сентябрь 2019',
         months: '4 месяца',
         position: 'Лаборант Брянского инженерно-технологического университета',
@@ -48,6 +48,7 @@ export default new Vuex.Store({
         id: 3
       }
     ],
+
     projectList: [
       {
         path: 'traffic-light',

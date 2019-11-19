@@ -1,17 +1,15 @@
 <template>
   <div class="header">
-    <h3 class="header__text">{{value}}</h3> 
+    <h3 class="header__text">{{value}}</h3>
   </div>
 </template>
 
 <script>
-
 export default {
-name: 'Header',
-props: {
-  value: String
-}
-
+  name: 'Header',
+  props: {
+    value: String
+  }
 }
 </script>
 
