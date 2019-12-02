@@ -59,13 +59,9 @@ export default new Vuex.Store({
         img: require("@/assets/images/weather-widget.png"),
       },
       {
-        path: 'traffic-light',
-        img: require("@/assets/images/traffic-light.png"),
-      },
-      {
-        path: 'traffic-light',
-        img: require("@/assets/images/traffic-light.png"),
-      },
+        path: 'todo-app',
+        img: require("@/assets/images/todo-app.png"),
+      }
     ],
   },
   getters: {

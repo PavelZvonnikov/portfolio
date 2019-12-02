@@ -49,5 +49,23 @@ computed: {
   }
 
 }
+@media screen and (max-width:800px) {
+
+  .wrapper-project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and(max-width:600px) {
+    .project__image {
+    width: 300px;
+  }
+}
+
 </style>
 

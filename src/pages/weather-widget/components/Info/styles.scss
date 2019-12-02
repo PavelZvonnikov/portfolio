@@ -1,0 +1,28 @@
+@import '../../assets/const.scss';
+
+.app-description {
+    &__title {
+    font-family: $font;
+    font-size: 34px;
+    color: #fff;
+    margin-bottom: 17px;
+    font-weight: 800;
+    }
+
+    &__text {
+        color: #e4e4e4;
+        Line-height: 22px;
+    }
+
+    &__background {
+        margin: 44px auto 11px auto ;
+    }
+}
+
+
+
+@media screen and (max-width: 540px) {
+    .app-description__title {
+        font-size: 26px;
+    }
+}

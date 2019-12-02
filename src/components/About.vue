@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="avatar">
-      <img src="../assets/images/avatar.jpg" alt="Photo">
+      <img class="avatar__image" src="../assets/images/avatar.jpg" alt="Photo">
     </div>
     <div class="info">
       <p class="info__name">Pavel Zvonnikov</p>
@@ -54,10 +54,14 @@
   margin-right: 50px;
   border-radius: 50%;
   overflow: hidden;
+
+  &__image {
+    width: 142px;
+  }
 }
 
 .info__name {
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   font-weight: 800;
   font-size: 42px;
   line-height: 110%;
@@ -67,6 +71,7 @@
   margin-bottom: 55px;
   font-size: 26px;
   opacity: 0.6;
+  line-height: normal;
 }
 
 .info__contacts {
@@ -88,4 +93,20 @@
   }
 }
 
+@media screen and (max-width:570px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width:320px) {
+  .info__communication {
+    font-size: 20px;
+  }
+}
 </style>

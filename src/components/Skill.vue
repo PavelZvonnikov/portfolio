@@ -8,7 +8,7 @@
       <div class="workplace__description">
         <span class="workplace__position">{{data.position}}</span>
         <span class="workplace__duties">{{data.duties}}</span>
-      </div> 
+      </div>
     </div>
   </div>
 </template>
@@ -69,6 +69,13 @@ computed: {
   &__duties {
     color:rgb(122, 122, 122);
     line-height: 130%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .workplace {
+    font-size: 18px;
+    justify-content: space-around;
   }
 }
 </style>

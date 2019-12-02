@@ -1,9 +1,9 @@
-.info {
+.information {
   margin-top: 30px;
   margin-bottom: 11px;
 }
 
-.info-text {
+.information-text {
   margin-bottom: 20px;
   font-size: 28px;
   line-height: 33px;
@@ -13,7 +13,7 @@
   opacity: 0.5;
 }
 
-.info-timer {
+.information-timer {
   margin-bottom: 40px;
   text-align: center;
   font-size: 40px;

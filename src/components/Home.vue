@@ -1,15 +1,17 @@
 <template>
-  <div class="home">
-    <About/>
-    <div class="wrapper-experience">
-      <Header :value="experience" />
-      <Skill />
-      <div class="wrapper-projects">
-        <Header :value="projectList" />
-        <Project />
+  <div class="home-wrapper">
+    <div class="home">
+      <About/>
+      <div class="wrapper-experience">
+        <Header :value="experience" />
+        <Skill />
+        <div class="wrapper-projects">
+          <Header :value="projectList" />
+          <Project />
+        </div>
       </div>
     </div>
-  </div>   
+  </div>
 </template>
 
 <script>
@@ -40,16 +42,22 @@ export default {
 </script>
 
 <style lang="scss">
-// .wrapper-home {
-//   width: 100%;
-//   height: 100vh;
-//   background-color: #333333;
-// }
 
 .home {
   max-width: 840px;
   margin: 0 auto;
-  // background-color: #333333;
+}
+
+.home-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+}
+
+@media screen and (max-width: 860px) {
+  .home {
+    padding: 0 15px;
+  }
 }
 
 </style>

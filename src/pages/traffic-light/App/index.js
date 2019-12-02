@@ -10,6 +10,7 @@ export default {
       activeColor: 0,
       timeToChange: 0,
       count: 0,
+      timerID: "",
       colorsList: [
         {
           color: 'red',
@@ -36,20 +37,32 @@ export default {
 
     return state;
   },
-  mounted: function() {
-    const routerValue = Number((this.$route.path).slice(-1));
-    this.activeColor = routerValue - 1;
-    this.timeToChange = this.colorsList[this.activeColor].seconds;
+  methods: {
+    light: function() {
+      const routerValue = Number((this.$route.path).slice(-1));
+      this.activeColor = routerValue - 1;
+      this.timeToChange = this.colorsList[this.activeColor].seconds;
 
-    setInterval(() => {
-      this.count++;
-      this.timeToChange--;
-      if (this.count > this.colorsList[this.activeColor].seconds) {
-        this.activeColor = (this.activeColor < 3) ? this.activeColor + 1 : 0;
-        this.count = 0;
-        this.timeToChange = this.colorsList[this.activeColor].seconds;
-        this.$router.push({ path: `${this.colorsList[this.activeColor].id}` });
-      }
-    }, 1000);
+    this.timerID = setInterval(() => {
+        this.count++;
+        this.timeToChange--;
+        if (this.count > this.colorsList[this.activeColor].seconds) {
+          this.activeColor = (this.activeColor < 3) ? this.activeColor + 1 : 0;
+          this.count = 0;
+          this.timeToChange = this.colorsList[this.activeColor].seconds;
+          this.$router.push({ path: `${this.colorsList[this.activeColor].id}` });
+        }
+      }, 1000);
+    },
   },
+  mounted: function() {
+    this.light();
+  },
+  beforeDestroy: function() {
+    this.light = null;
+  }
+  // destroyed: function() {
+  //   window.console.log("destroyed");
+  //   clearInterval(this.light);
+  // }
 }

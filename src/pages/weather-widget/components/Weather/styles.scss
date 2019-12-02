@@ -1,0 +1,33 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  width: 40px;
+  margin-right: 15px;
+}
+.elem {
+  display: flex;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+p {
+  align-self: center;
+}
+.text {
+  color: #A5A5A5;
+}
+
+li {
+  list-style-type: none;
+}
+.blue {
+  color: #419BF4;
+}
+
+@media screen and (max-width: 540px) {
+  .elem {
+    font-size: 16px;
+  }
+}

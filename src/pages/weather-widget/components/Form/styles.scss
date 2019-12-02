@@ -1,0 +1,88 @@
+.form-wrapper {
+  margin-top: 39px;
+  margin-bottom: 33px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  &__input {
+    width: 63.31877%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #A5A5A5;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &__remove-item {
+    align-self: center;
+    color: #B2B2B2;
+    font-size: 30px;
+    cursor: default;
+  }
+}
+
+.submit {
+  width: 33.8427947%;
+  height: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  color: #FFFFFF;
+  outline: none;
+  font-size: 20px;
+  background-color: #419BF4;
+}
+
+.submit:hover {
+  background-color: rgb(49, 138, 228);
+  cursor: pointer;
+}
+
+.submit:active {
+    background-color:rgba(96,40,168,1);
+  top: 2px;
+}
+
+.city-name {
+  font-size: 20px;
+  outline: none;
+  border: 0;
+  color: #333333;
+  width: 90%;
+}
+
+.city-name::-webkit-input-placeholder {
+  color: #A5A5A5;
+}
+
+.city-name::-moz-placeholder {
+  color: #A5A5A5;
+}
+
+@media screen and (max-width: 540px) {
+  .form-wrapper {
+    &__remove-item {
+      font-size: 26px;
+    }
+    &__input {
+      height: 40px;
+      padding-left: 9px;
+      padding-right: 9px;
+    }
+  }
+
+  .submit {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .city-name {
+    font-size: 16px;
+  }
+}

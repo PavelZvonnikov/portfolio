@@ -5,29 +5,39 @@ export const trafficLightRoutes = {
   name: 'traffic-light',
   path: '/traffic-light',
   component: Traffic,
-  props: true,
   children: [
     {
-      name: "red",
-      path: '/traffic-light/1',
+      name: "color",
+      path: '/traffic-light/:id',
       component: Color,
-      props: true
+      beforeEnter: (to, from, next) => {
+        if (from.fullPath === to.fullPath === '/home' ) {
+          next(false)
+        }
+        else {
+          next()
+        }
+      }
     },
-    {
-      name: "yellow",
-      path: '/traffic-light/2',
-      component: Color,
-      props: true,
-    },
-    {
-      name: "green",
-      path: '/traffic-light/3',
-      component: Color,
-      props: true
-    },
+    // {
+    //   name: "red",
+    //   path: '/traffic-light/1',
+    //   component: Color,
+    // },
+    // {
+    //   name: "yellow",
+    //   path: '/traffic-light/2',
+    //   component: Color,
+    // },
+    // {
+    //   name: "green",
+    //   path: '/traffic-light/3',
+    //   component: Color,
+    // },
     {
       path: '/traffic-light*',
       redirect: '/traffic-light/1'
     }
   ],
 };
+
