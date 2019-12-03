@@ -1,0 +1,16 @@
+.home {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.home-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+}
+
+@media screen and (max-width: 860px) {
+  .home {
+    padding: 0 15px;
+  }
+}

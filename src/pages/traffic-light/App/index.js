@@ -43,7 +43,7 @@ export default {
       this.activeColor = routerValue - 1;
       this.timeToChange = this.colorsList[this.activeColor].seconds;
 
-      this.timerID = setInterval(() => {
+    this.timerID = setInterval(() => {
         this.count++;
         this.timeToChange--;
         if (this.count > this.colorsList[this.activeColor].seconds) {
@@ -61,4 +61,5 @@ export default {
   beforeDestroy: function() {
     clearInterval(this.timerID);
   }
+
 }

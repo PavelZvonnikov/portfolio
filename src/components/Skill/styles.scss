@@ -1,0 +1,51 @@
+.wraper-skills {
+  margin-bottom: 80px;
+}
+
+.workplace {
+margin-bottom: 60px;
+display: flex;
+justify-content: space-between;
+color: #fff;
+font-family: Arial, sans-serif;
+font-size: 23px;
+line-height: 110%;
+
+&:last-child {
+  margin-bottom: 0;
+}
+
+&__date {
+  display: flex;
+  flex-direction: column;
+}
+
+&__description {
+  width: 50.4762%;
+  max-width: 424px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+&__length {
+  color: #A9D539;
+  margin-bottom: 13px;
+}
+
+&__position {
+  margin-bottom: 15px;
+}
+
+&__duties {
+  color:rgb(122, 122, 122);
+  line-height: 130%;
+}
+}
+
+@media screen and (max-width:480px) {
+.workplace {
+  font-size: 18px;
+  justify-content: space-around;
+}
+}

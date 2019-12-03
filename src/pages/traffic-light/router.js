@@ -11,6 +11,7 @@ export const trafficLightRoutes = {
       path: '/traffic-light/:id',
       component: Color,
     },
+
     {
       path: '/traffic-light*',
       redirect: '/traffic-light/1'

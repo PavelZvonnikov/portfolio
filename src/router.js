@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 import { trafficLightRoutes } from './pages/traffic-light/router';
 
-import Home from './components/Home.vue'
+import Home from './components/Home/temp.vue'
 import WeatherWidget from './pages/weather-widget/App/temp.vue'
 import ToDoApp from './pages/todo-app/App.vue'
 
