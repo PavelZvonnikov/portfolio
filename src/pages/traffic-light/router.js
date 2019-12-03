@@ -10,30 +10,7 @@ export const trafficLightRoutes = {
       name: "color",
       path: '/traffic-light/:id',
       component: Color,
-      beforeEnter: (to, from, next) => {
-        if (from.fullPath === to.fullPath === '/home' ) {
-          next(false)
-        }
-        else {
-          next()
-        }
-      }
     },
-    // {
-    //   name: "red",
-    //   path: '/traffic-light/1',
-    //   component: Color,
-    // },
-    // {
-    //   name: "yellow",
-    //   path: '/traffic-light/2',
-    //   component: Color,
-    // },
-    // {
-    //   name: "green",
-    //   path: '/traffic-light/3',
-    //   component: Color,
-    // },
     {
       path: '/traffic-light*',
       redirect: '/traffic-light/1'
