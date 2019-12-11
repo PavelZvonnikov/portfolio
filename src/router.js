@@ -1,39 +1,38 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-import { trafficLightRoutes } from './pages/traffic-light/router';
+import { trafficLightRoutes } from "./pages/traffic-light/router";
 
-import Home from './components/Home/temp.vue'
-import WeatherWidget from './pages/weather-widget/App/temp.vue'
-import ToDoApp from './pages/todo-app/App.vue'
+import Home from "./components/Home/temp.vue";
+import WeatherWidget from "./pages/weather-widget/App/temp.vue";
+import ToDoApp from "./pages/todo-app/App.vue";
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      name: 'home',
-      path: '/home',
-      component: Home,
+      name: "home",
+      path: "/portfolio",
+      component: Home
     },
     {
-      name: 'weather-widget',
-      path: '/weather-widget',
-      component: WeatherWidget,
+      name: "weather-widget",
+      path: "/weather-widget",
+      component: WeatherWidget
     },
     {
-      name: 'todo-app',
-      path: '/todo-app',
-      component: ToDoApp,
+      name: "todo-app",
+      path: "/todo-app",
+      component: ToDoApp
     },
     trafficLightRoutes,
     {
-      path: '**',
-      redirect: '/home'
-    },
+      path: "**",
+      redirect: "/home"
+    }
   ]
-})
+});
 
 export default router;
