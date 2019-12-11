@@ -30,7 +30,7 @@ const router = new VueRouter({
     trafficLightRoutes,
     {
       path: "**",
-      redirect: "/home"
+      redirect: "/portfolio"
     }
   ]
 });
