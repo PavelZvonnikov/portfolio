@@ -19,12 +19,12 @@ const router = new VueRouter({
     },
     {
       name: "weather-widget",
-      path: "/weather-widget",
+      path: "/portfolio/weather-widget",
       component: WeatherWidget
     },
     {
       name: "todo-app",
-      path: "/todo-app",
+      path: "/portfolio/todo-app",
       component: ToDoApp
     },
     trafficLightRoutes,

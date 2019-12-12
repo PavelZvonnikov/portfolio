@@ -1,21 +1,20 @@
-import Traffic from './App/temp.vue'
-import Color from './components/Color/temp.vue'
+import Traffic from "./App/temp.vue";
+import Color from "./components/Color/temp.vue";
 
 export const trafficLightRoutes = {
-  name: 'traffic-light',
-  path: '/traffic-light',
+  name: "traffic-light",
+  path: "/portfolio/traffic-light",
   component: Traffic,
   children: [
     {
       name: "color",
-      path: '/traffic-light/:id',
-      component: Color,
+      path: "/portfolio/traffic-light/:id",
+      component: Color
     },
 
     {
-      path: '/traffic-light*',
-      redirect: '/traffic-light/1'
+      path: "/portfolio/traffic-light*",
+      redirect: "/portfolio/traffic-light/1"
     }
-  ],
+  ]
 };
-
